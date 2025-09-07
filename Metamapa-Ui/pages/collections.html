@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Colecciones - MetaMapa</title>
+    <meta name="description" content="Explora colecciones temáticas de hechos verificados organizados por temas específicos.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link active">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+                    <span class="breadcrumb-item"><a href="index.html">Inicio</a></span>
+                    <span class="breadcrumb-item active">Colecciones</span>
+                </nav>
+
+                <!-- Page Header -->
+                <div class="page-header">
+                    <h1>Colecciones de Hechos</h1>
+                    <p>Explora conjuntos temáticos de hechos verificados organizados por expertos y la comunidad.</p>
+                </div>
+
+                <!-- Search and Filters -->
+                <div class="search-section">
+                    <form class="search-form" role="search">
+                        <div class="form-group">
+                            <label for="search-input" class="sr-only">Buscar colecciones</label>
+                            <input 
+                                type="search" 
+                                id="search-input" 
+                                class="form-input search-input" 
+                                placeholder="Buscar colecciones"
+                                aria-describedby="search-help"
+                            >
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            🔍 <span class="sr-only">Buscar</span>
+                        </button>
+                    </form>
+                    <div class="filters">
+                    <div class="filter-group">
+                        <label for="category-filter">Filtrar por</label>
+                            <select id="category-filter" class="form-select">
+                                <option value="">Sin filtros</option>
+                                <option value="recent">Más recientes</option>
+                                <option value="popular">Más populares</option>
+                                <option value="facts">Más hechos</option>
+                            </select>
+                    </div>
+                    </div>
+                </div>
+
+                <!-- Collections Grid -->
+                <div class="collections-grid">
+                    <article class="card collection-card">
+                        <div class="collection-header">
+                            <div class="collection-meta">
+                                <span class="badge badge-primary">Historia</span>
+                                <span class="collection-count">12 hechos</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Revolución Industrial</h3>
+                            <p class="card-text">Una colección completa sobre los eventos, inventos y cambios sociales que marcaron la Primera y Segunda Revolución Industrial.</p>
+                            <div class="collection-stats">
+                                <span class="stat">👥 3 contribuidores</span>
+                                <span class="stat">📅 Actualizada hace 2 días</span>
+                            </div>
+                            <div class="collection-actions">
+                                <a href="collection-detail.html" class="btn btn-primary">Ver Colección</a>
+                                <button class="btn btn-secondary tooltip" data-tooltip="Marcar como favorita" aria-label="Marcar como favorita">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card collection-card">
+                        <div class="collection-header">
+                            <div class="collection-meta">
+                                <span class="badge badge-success">Ciencia</span>
+                                <span class="collection-count">8 hechos</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Descubrimientos del ADN</h3>
+                            <p class="card-text">Desde el descubrimiento inicial de Miescher hasta la secuenciación del genoma humano, todos los hitos en la investigación genética.</p>
+                            <div class="collection-stats">
+                                <span class="stat">👥 5 contribuidores</span>
+                                <span class="stat">📅 Actualizada hace 1 semana</span>
+                            </div>
+                            <div class="collection-actions">
+                                <a href="collection-detail.html" class="btn btn-primary">Ver Colección</a>
+                                <button class="btn btn-secondary tooltip" data-tooltip="Marcar como favorita" aria-label="Marcar como favorita">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card collection-card">
+                        <div class="collection-header">
+                            <div class="collection-meta">
+                                <span class="badge badge-warning">Tecnología</span>
+                                <span class="collection-count">15 hechos</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Historia de Internet</h3>
+                            <p class="card-text">La evolución de la red mundial desde ARPANET hasta la web moderna, incluyendo todos los hitos tecnológicos importantes.</p>
+                            <div class="collection-stats">
+                                <span class="stat">👥 7 contribuidores</span>
+                                <span class="stat">📅 Actualizada hace 3 días</span>
+                            </div>
+                            <div class="collection-actions">
+                                <a href="collection-detail.html" class="btn btn-primary">Ver Colección</a>
+                                <button class="btn btn-secondary tooltip" data-tooltip="Marcar como favorita" aria-label="Marcar como favorita">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card collection-card">
+                        <div class="collection-header">
+                            <div class="collection-meta">
+                                <span class="badge badge-info">Cultura</span>
+                                <span class="collection-count">6 hechos</span>
+                            </div>
+                        </div>
+                        <div class="card-body">
+                            <h3 class="card-title">Renacimiento Italiano</h3>
+                            <p class="card-text">Los grandes maestros, obras y eventos culturales que definieron el Renacimiento en Italia durante los siglos XV y XVI.</p>
+                            <div class="collection-stats">
+                                <span class="stat">👥 4 contribuidores</span>
+                                <span class="stat">📅 Actualizada hace 5 días</span>
+                            </div>
+                            <div class="collection-actions">
+                                <a href="collection-detail.html" class="btn btn-primary">Ver Colección</a>
+                                <button class="btn btn-secondary tooltip" data-tooltip="Marcar como favorita" aria-label="Marcar como favorita">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+
+                <!-- Pagination -->
+                <nav class="pagination" aria-label="Navegación de páginas">
+                    <button class="btn btn-secondary" disabled>Anterior</button>
+                    <span class="pagination-info">Página 1 de 3</span>
+                    <button class="btn btn-secondary">Siguiente</button>
+                </nav>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MetaMapa</h3>
+                        <p>Plataforma colaborativa para la verificación de hechos históricos y actuales.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navegación</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="viewer.html">Explorar</a></li>
+                            <li><a href="collections.html">Colecciones</a></li>
+                            <li><a href="contributor.html">Contribuir</a></li>
+                            <li><a href="admin.html">Administración</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Cuenta</h3>
+                        <ul class="footer-links">
+                            <li><a href="login.html">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="legal.html">Términos de Uso</a></li>
+                            <li><a href="legal.html#privacy">Privacidad</a></li>
+                            <li><a href="legal.html#guidelines">Directrices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MetaMapa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

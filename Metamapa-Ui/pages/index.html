@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MetaMapa - Plataforma de Verificación de Hechos</title>
+    <meta name="description" content="MetaMapa es una plataforma colaborativa para la verificación y documentación de hechos históricos y actuales.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link active">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <!-- Hero Section -->
+            <section class="hero">
+                <div class="container">
+                    <h1>Verificación de Hechos Colaborativa</h1>
+                    <p>Una plataforma donde la comunidad documenta, verifica y comparte información confiable sobre hechos históricos y actuales.</p>
+                    <div class="hero-actions">
+                        <a href="viewer.html" class="btn btn-secondary">Explorar Hechos</a>
+                        <a href="collections.html" class="btn btn-secondary">Ver Colecciones</a>
+                        <a href="contributor.html" class="btn btn-secondary">Contribuir</a>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Stats Section -->
+            <section class="container">
+                <div class="stats">
+                    <div class="stat-card">
+                        <div class="stat-number">1,247</div>
+                        <div class="stat-label">Hechos Verificados</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">89</div>
+                        <div class="stat-label">Contribuidores Activos</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">3,456</div>
+                        <div class="stat-label">Fuentes Documentadas</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">98%</div>
+                        <div class="stat-label">Precisión Verificada</div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Features Section -->
+            <section class="features">
+                <div class="container">
+                    <h2>¿Cómo Funciona MetaMapa?</h2>
+                    <div class="feature-grid">
+                        <div class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">🔍</div>
+                            <h3>Explorar</h3>
+                            <p>Navega por miles de hechos verificados organizados por categorías, fechas y relevancia. Utiliza filtros avanzados para encontrar exactamente lo que buscas.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">✍️</div>
+                            <h3>Contribuir</h3>
+                            <p>Comparte nuevos hechos con fuentes confiables. Nuestro sistema de revisión por pares asegura la calidad y veracidad de toda la información.</p>
+                        </div>
+                        <div class="feature-card">
+                            <div class="feature-icon" aria-hidden="true">✅</div>
+                            <h3>Verificar</h3>
+                            <p>Participa en el proceso de verificación revisando fuentes, validando información y ayudando a mantener la integridad de la plataforma.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Recent Facts Section -->
+            <section class="container">
+                <h2>Hechos Recientes</h2>
+                <div class="fact-grid">
+                    <article class="card fact-card">
+                        <div class="card-body">
+                            <div class="fact-meta">
+                                <span class="badge badge-primary">Historia</span>
+                                <time datetime="2024-01-15">15 Ene 2024</time>
+                            </div>
+                            <h3 class="card-title">La Revolución Industrial comenzó en Inglaterra</h3>
+                            <p class="card-text">La Primera Revolución Industrial se inició en Gran Bretaña a mediados del siglo XVIII, transformando la producción manufacturera y la sociedad.</p>
+                            <div class="fact-tags">
+                                <span class="badge badge-secondary">Siglo XVIII</span>
+                                <span class="badge badge-secondary">Inglaterra</span>
+                                <span class="badge badge-secondary">Industria</span>
+                            </div>
+                            <div class="fact-actions">
+                                <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fact-card">
+                        <div class="card-body">
+                            <div class="fact-meta">
+                                <span class="badge badge-success">Ciencia</span>
+                                <time datetime="2024-01-14">14 Ene 2024</time>
+                            </div>
+                            <h3 class="card-title">El ADN fue descubierto por Friedrich Miescher</h3>
+                            <p class="card-text">En 1869, el bioquímico suizo Friedrich Miescher aisló por primera vez el ácido desoxirribonucleico (ADN) de los núcleos de glóbulos blancos.</p>
+                            <div class="fact-tags">
+                                <span class="badge badge-secondary">1869</span>
+                                <span class="badge badge-secondary">Bioquímica</span>
+                                <span class="badge badge-secondary">Genética</span>
+                            </div>
+                            <div class="fact-actions">
+                                <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+
+                    <article class="card fact-card">
+                        <div class="card-body">
+                            <div class="fact-meta">
+                                <span class="badge badge-warning">Tecnología</span>
+                                <time datetime="2024-01-13">13 Ene 2024</time>
+                            </div>
+                            <h3 class="card-title">Internet se hizo público en 1991</h3>
+                            <p class="card-text">Tim Berners-Lee hizo público el primer sitio web el 6 de agosto de 1991, marcando el inicio de la World Wide Web como la conocemos.</p>
+                            <div class="fact-tags">
+                                <span class="badge badge-secondary">1991</span>
+                                <span class="badge badge-secondary">Internet</span>
+                                <span class="badge badge-secondary">WWW</span>
+                            </div>
+                            <div class="fact-actions">
+                                <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                            </div>
+                        </div>
+                    </article>
+                </div>
+                
+                <div class="mt-xl" style="text-align: center;">
+                    <a href="viewer.html" class="btn btn-outline">Ver Todos los Hechos</a>
+                </div>
+            </section>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MetaMapa</h3>
+                        <p>Plataforma colaborativa para la verificación de hechos históricos y actuales.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navegación</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="viewer.html">Explorar</a></li>
+                            <li><a href="collections.html">Colecciones</a></li>
+                            <li><a href="contributor.html">Contribuir</a></li>
+                            <li><a href="admin.html">Administración</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Cuenta</h3>
+                        <ul class="footer-links">
+                            <li><a href="login.html">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="legal.html">Términos de Uso</a></li>
+                            <li><a href="legal.html#privacy">Privacidad</a></li>
+                            <li><a href="legal.html#guidelines">Directrices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MetaMapa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Explorar Hechos - MetaMapa</title>
+    <meta name="description" content="Explora y busca hechos verificados en MetaMapa. Utiliza filtros avanzados para encontrar información confiable.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link active">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+                    <span class="breadcrumb-item"><a href="index.html">Inicio</a></span>
+                    <span class="breadcrumb-item active">Explorar Hechos</span>
+                </nav>
+
+                <h1>Explorar Hechos Verificados</h1>
+                <p class="mb-xl">Descubre información confiable y verificada por nuestra comunidad de expertos.</p>
+
+                <!-- Search and Filters -->
+                <section class="search-section" aria-label="Búsqueda y filtros">
+                    <form class="search-form" role="search">
+                        <div class="form-group">
+                            <label for="search-input" class="sr-only">Buscar hechos</label>
+                            <input 
+                                type="search" 
+                                id="search-input" 
+                                class="form-input search-input" 
+                                placeholder="Buscar hechos, personas, eventos..."
+                                aria-describedby="search-help"
+                            >
+                            <div id="search-help" class="form-help">
+                                Utiliza palabras clave para encontrar hechos específicos
+                            </div>
+                        </div>
+                        <button type="submit" class="btn btn-primary">
+                            🔍 <span class="sr-only">Buscar</span>
+                        </button>
+                    </form>
+
+                    <div class="filters">
+                        <div class="filter-group">
+                            <label for="category-filter">Categoría</label>
+                            <select id="category-filter" class="form-select">
+                                <option value="">Todas las categorías</option>
+                                <option value="historia">Historia</option>
+                                <option value="ciencia">Ciencia</option>
+                                <option value="tecnologia">Tecnología</option>
+                                <option value="politica">Política</option>
+                                <option value="cultura">Cultura</option>
+                                <option value="economia">Economía</option>
+                            </select>
+                        </div>
+
+
+                        <div class="filter-group">
+                            <label for="verification-filter">Estado</label>
+                            <select id="verification-filter" class="form-select">
+                                <option value="">Todos los estados</option>
+                                <option value="verified">Verificado</option>
+                                <option value="pending">Pendiente</option>
+                                <option value="disputed">En disputa</option>
+                            </select>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Results -->
+                <section class="results-section" aria-label="Resultados de búsqueda">
+                    <div class="results-header">
+                        <div class="results-count">
+                            Mostrando <strong>1-12</strong> de <strong>247</strong> hechos
+                        </div>
+                        <div class="flex items-center gap-md">
+                            <label for="sort-select">Ordenar por:</label>
+                            <select id="sort-select" class="form-select sort-select">
+                                <option value="relevance">Relevancia</option>
+                                <option value="date-desc">Fecha (más reciente)</option>
+                                <option value="date-asc">Fecha (más antiguo)</option>
+                                <option value="title">Título A-Z</option>
+                                <option value="verification">Estado de verificación</option>
+                            </select>
+                        </div>
+                    </div>
+
+                    <!-- Loading state example -->
+                    <div class="loading mb-lg" style="display: none;">
+                        <div class="spinner" aria-hidden="true"></div>
+                        <span>Cargando resultados...</span>
+                    </div>
+
+                    <div class="fact-grid">
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-primary">Historia</span>
+                                    <time datetime="1789-07-14">14 Jul 1789</time>
+                                </div>
+                                <h3 class="card-title">La Toma de la Bastilla</h3>
+                                <p class="card-text">El 14 de julio de 1789, los ciudadanos parisinos asaltaron la fortaleza de la Bastilla, marcando el inicio simbólico de la Revolución Francesa.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">Revolución Francesa</span>
+                                    <span class="badge badge-secondary">París</span>
+                                    <span class="badge badge-success">Verificado</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-success">Ciencia</span>
+                                    <time datetime="1953-04-25">25 Abr 1953</time>
+                                </div>
+                                <h3 class="card-title">Descubrimiento de la estructura del ADN</h3>
+                                <p class="card-text">Watson y Crick publicaron su modelo de la estructura de doble hélice del ADN en la revista Nature, revolucionando la biología molecular.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">Biología</span>
+                                    <span class="badge badge-secondary">Genética</span>
+                                    <span class="badge badge-success">Verificado</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-warning">Tecnología</span>
+                                    <time datetime="1969-07-20">20 Jul 1969</time>
+                                </div>
+                                <h3 class="card-title">Primera llegada del hombre a la Luna</h3>
+                                <p class="card-text">Neil Armstrong y Buzz Aldrin se convirtieron en los primeros humanos en caminar sobre la superficie lunar durante la misión Apollo 11.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">NASA</span>
+                                    <span class="badge badge-secondary">Espacio</span>
+                                    <span class="badge badge-success">Verificado</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-error">Política</span>
+                                    <time datetime="1989-11-09">09 Nov 1989</time>
+                                </div>
+                                <h3 class="card-title">Caída del Muro de Berlín</h3>
+                                <p class="card-text">El 9 de noviembre de 1989, el Muro de Berlín fue derribado, simbolizando el fin de la Guerra Fría y la reunificación de Alemania.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">Guerra Fría</span>
+                                    <span class="badge badge-secondary">Alemania</span>
+                                    <span class="badge badge-warning">En revisión</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-primary">Historia</span>
+                                    <time datetime="1492-10-12">12 Oct 1492</time>
+                                </div>
+                                <h3 class="card-title">Llegada de Colón a América</h3>
+                                <p class="card-text">Cristóbal Colón llegó a las islas del Caribe el 12 de octubre de 1492, iniciando el contacto permanente entre Europa y América.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">Descubrimientos</span>
+                                    <span class="badge badge-secondary">América</span>
+                                    <span class="badge badge-success">Verificado</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+
+                        <article class="card fact-card">
+                            <div class="card-body">
+                                <div class="fact-meta">
+                                    <span class="badge badge-success">Ciencia</span>
+                                    <time datetime="1859-11-24">24 Nov 1859</time>
+                                </div>
+                                <h3 class="card-title">Publicación de "El Origen de las Especies"</h3>
+                                <p class="card-text">Charles Darwin publicó su obra fundamental sobre la evolución, revolucionando nuestra comprensión de la vida en la Tierra.</p>
+                                <div class="fact-tags">
+                                    <span class="badge badge-secondary">Evolución</span>
+                                    <span class="badge badge-secondary">Darwin</span>
+                                    <span class="badge badge-success">Verificado</span>
+                                </div>
+                                <div class="fact-actions">
+                                    <a href="fact.html" class="btn btn-sm btn-primary">Ver Detalles</a>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Marcar como favorito" aria-label="Marcar como favorito">⭐</button>
+                                    <button class="btn btn-sm btn-secondary tooltip" data-tooltip="Compartir" aria-label="Compartir">📤</button>
+                                </div>
+                            </div>
+                        </article>
+                    </div>
+
+                    <!-- Pagination -->
+                    <nav class="mt-xl" aria-label="Paginación de resultados">
+                        <div class="flex justify-center gap-md">
+                            <button class="btn btn-secondary" disabled>← Anterior</button>
+                            <button class="btn btn-primary">1</button>
+                            <button class="btn btn-secondary">2</button>
+                            <button class="btn btn-secondary">3</button>
+                            <span class="flex items-center">...</span>
+                            <button class="btn btn-secondary">21</button>
+                            <button class="btn btn-secondary">Siguiente →</button>
+                        </div>
+                    </nav>
+                </section>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MetaMapa</h3>
+                        <p>Plataforma colaborativa para la verificación de hechos históricos y actuales.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navegación</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="viewer.html">Explorar</a></li>
+                            <li><a href="contributor.html">Contribuir</a></li>
+                            <li><a href="admin.html">Administración</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Cuenta</h3>
+                        <ul class="footer-links">
+                            <li><a href="login.html">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="legal.html">Términos de Uso</a></li>
+                            <li><a href="legal.html#privacy">Privacidad</a></li>
+                            <li><a href="legal.html#guidelines">Directrices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MetaMapa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

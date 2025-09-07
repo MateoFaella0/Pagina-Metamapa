@@ -1,0 +1,356 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contribuir - MetaMapa</title>
+    <meta name="description" content="Contribuye a MetaMapa compartiendo hechos verificados y ayudando a construir una base de conocimiento confiable.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link active">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+                    <span class="breadcrumb-item"><a href="index.html">Inicio</a></span>
+                    <span class="breadcrumb-item active">Contribuir</span>
+                </nav>
+
+                <div class="container-sm">
+                    <h1>Contribuir un Nuevo Hecho</h1>
+                    <p class="mb-xl">Ayuda a construir la base de conocimiento más confiable compartiendo hechos verificados con fuentes sólidas.</p>
+
+                    <div class="alert alert-info mb-xl">
+                        <strong>Antes de contribuir:</strong> Asegúrate de que el hecho sea verificable, tenga fuentes confiables y no esté ya documentado en nuestra plataforma. Revisa nuestras <a href="legal.html#guidelines">directrices de contribución</a>.
+                    </div>
+
+                    <form class="contributor-form" novalidate>
+                        <!-- Basic Information -->
+                        <div class="form-section">
+                            <h3>Información Básica</h3>
+                            
+                            <div class="form-group">
+                                <label for="fact-title" class="form-label required">Título del Hecho</label>
+                                <input 
+                                    type="text" 
+                                    id="fact-title" 
+                                    class="form-input" 
+                                    required
+                                    maxlength="200"
+                                    aria-describedby="title-help"
+                                    placeholder="Ej: La invención de la imprenta por Gutenberg"
+                                >
+                                <div id="title-help" class="form-help">
+                                    Escribe un título claro y descriptivo (máximo 200 caracteres)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fact-category" class="form-label required">Categoría</label>
+                                <select id="fact-category" class="form-select" required>
+                                    <option value="">Selecciona una categoría</option>
+                                    <option value="historia">Historia</option>
+                                    <option value="ciencia">Ciencia</option>
+                                    <option value="tecnologia">Tecnología</option>
+                                    <option value="politica">Política</option>
+                                    <option value="cultura">Cultura</option>
+                                    <option value="economia">Economía</option>
+                                    <option value="geografia">Geografía</option>
+                                    <option value="biografia">Biografía</option>
+                                </select>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fact-date" class="form-label">Fecha del Hecho</label>
+                                <input 
+                                    type="date" 
+                                    id="fact-date" 
+                                    class="form-input"
+                                    aria-describedby="date-help"
+                                >
+                                <div id="date-help" class="form-help">
+                                    Si es un período o fecha aproximada, especifícalo en la descripción
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fact-tags" class="form-label">Etiquetas</label>
+                                <input 
+                                    type="text" 
+                                    id="fact-tags" 
+                                    class="form-input"
+                                    placeholder="Ej: imprenta, Gutenberg, siglo XV, comunicación"
+                                    aria-describedby="tags-help"
+                                >
+                                <div id="tags-help" class="form-help">
+                                    Separa las etiquetas con comas. Ayudan a otros usuarios a encontrar tu contribución
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Content -->
+                        <div class="form-section">
+                            <h3>Contenido del Hecho</h3>
+                            
+                            <div class="form-group">
+                                <label for="fact-summary" class="form-label required">Resumen</label>
+                                <textarea 
+                                    id="fact-summary" 
+                                    class="form-textarea" 
+                                    required
+                                    maxlength="500"
+                                    rows="4"
+                                    placeholder="Escribe un resumen conciso del hecho..."
+                                    aria-describedby="summary-help summary-count"
+                                ></textarea>
+                                <div id="summary-help" class="form-help">
+                                    Proporciona un resumen claro y conciso del hecho (máximo 500 caracteres)
+                                </div>
+                                <div id="summary-count" class="character-count">0/500</div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="fact-description" class="form-label required">Descripción Detallada</label>
+                                <textarea 
+                                    id="fact-description" 
+                                    class="form-textarea" 
+                                    required
+                                    minlength="200"
+                                    maxlength="5000"
+                                    rows="10"
+                                    placeholder="Proporciona una descripción detallada del hecho, incluyendo contexto, causas, consecuencias..."
+                                    aria-describedby="description-help description-count"
+                                ></textarea>
+                                <div id="description-help" class="form-help">
+                                    Incluye contexto histórico, detalles relevantes y consecuencias (mínimo 200, máximo 5000 caracteres)
+                                </div>
+                                <div id="description-count" class="character-count">0/5000</div>
+                            </div>
+                        </div>
+
+                        <!-- Sources -->
+                        <div class="form-section">
+                            <h3>Fuentes y Referencias</h3>
+                            <p class="mb-lg text-gray-700">Las fuentes son fundamentales para la verificación. Proporciona al menos 2 fuentes confiables.</p>
+                            
+                            <div class="form-group">
+                                <label for="source-1" class="form-label required">Fuente Principal</label>
+                                <input 
+                                    type="url" 
+                                    id="source-1" 
+                                    class="form-input" 
+                                    required
+                                    placeholder="https://ejemplo.com/articulo-academico"
+                                    aria-describedby="source-1-help"
+                                >
+                                <div id="source-1-help" class="form-help">
+                                    URL de la fuente principal (artículo académico, libro, documento oficial)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="source-1-desc" class="form-label required">Descripción de la Fuente Principal</label>
+                                <textarea 
+                                    id="source-1-desc" 
+                                    class="form-textarea" 
+                                    required
+                                    maxlength="300"
+                                    rows="3"
+                                    placeholder="Ej: Smith, John. 'Historia de la Imprenta'. Editorial Académica, 2020. Capítulo 3: Los inicios de Gutenberg."
+                                    aria-describedby="source-1-desc-help"
+                                ></textarea>
+                                <div id="source-1-desc-help" class="form-help">
+                                    Cita completa o descripción detallada de la fuente (máximo 300 caracteres)
+                                </div>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="source-2" class="form-label required">Fuente Secundaria</label>
+                                <input 
+                                    type="url" 
+                                    id="source-2" 
+                                    class="form-input" 
+                                    required
+                                    placeholder="https://ejemplo.com/segunda-fuente"
+                                >
+                            </div>
+
+                            <div class="form-group">
+                                <label for="source-2-desc" class="form-label required">Descripción de la Fuente Secundaria</label>
+                                <textarea 
+                                    id="source-2-desc" 
+                                    class="form-textarea" 
+                                    required
+                                    maxlength="300"
+                                    rows="3"
+                                    placeholder="Segunda fuente que corrobora la información..."
+                                ></textarea>
+                            </div>
+
+                            <div class="form-group">
+                                <label for="additional-sources" class="form-label">Fuentes Adicionales</label>
+                                <textarea 
+                                    id="additional-sources" 
+                                    class="form-textarea" 
+                                    maxlength="1000"
+                                    rows="4"
+                                    placeholder="Lista cualquier fuente adicional que respalde el hecho..."
+                                    aria-describedby="additional-sources-help"
+                                ></textarea>
+                                <div id="additional-sources-help" class="form-help">
+                                    Fuentes adicionales que fortalezcan la verificación del hecho (opcional)
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Verification -->
+                        <div class="form-section">
+                            <h3>Verificación y Compromiso</h3>
+                            
+                            <div class="form-check">
+                                <input type="checkbox" id="accuracy-check" class="form-check-input" required>
+                                <label for="accuracy-check" class="form-check-label">
+                                    Confirmo que he verificado la precisión de este hecho utilizando fuentes confiables y que la información proporcionada es exacta según mi conocimiento.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="originality-check" class="form-check-input" required>
+                                <label for="originality-check" class="form-check-label">
+                                    Confirmo que este hecho no está duplicado en la plataforma y que he realizado una búsqueda previa para evitar contenido repetido.
+                                </label>
+                            </div>
+
+                            <div class="form-check">
+                                <input type="checkbox" id="guidelines-check" class="form-check-input" required>
+                                <label for="guidelines-check" class="form-check-label">
+                                    He leído y acepto las <a href="legal.html#guidelines" target="_blank">directrices de contribución</a> y los <a href="legal.html" target="_blank">términos de uso</a> de MetaMapa.
+                                </label>
+                            </div>
+                        </div>
+
+                        <!-- Submit -->
+                        <div class="form-section">
+                            <div class="alert alert-warning">
+                                <strong>Proceso de revisión:</strong> Tu contribución será revisada por nuestro equipo de expertos antes de ser publicada. Este proceso puede tomar entre 2-5 días hábiles.
+                            </div>
+                            
+                            <div class="flex gap-md justify-center">
+                                <button type="button" class="btn btn-secondary">Guardar Borrador</button>
+                                <button type="submit" class="btn btn-primary">Enviar para Revisión</button>
+                            </div>
+                        </div>
+                    </form>
+
+                    <!-- Help Section -->
+                    <section class="mt-2xl">
+                        <div class="card">
+                            <div class="card-header">
+                                <h3 class="card-title">¿Necesitas Ayuda?</h3>
+                            </div>
+                            <div class="card-body">
+                                <div class="grid grid-2">
+                                    <div>
+                                        <h4>Directrices de Calidad</h4>
+                                        <ul>
+                                            <li>Utiliza fuentes académicas o institucionales</li>
+                                            <li>Evita sesgos personales o políticos</li>
+                                            <li>Proporciona contexto histórico relevante</li>
+                                            <li>Usa un lenguaje claro y objetivo</li>
+                                        </ul>
+                                    </div>
+                                    <div>
+                                        <h4>Tipos de Fuentes Aceptadas</h4>
+                                        <ul>
+                                            <li>Artículos de revistas académicas</li>
+                                            <li>Libros de editoriales reconocidas</li>
+                                            <li>Documentos oficiales gubernamentales</li>
+                                            <li>Archivos históricos digitalizados</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="mt-lg">
+                                    <a href="legal.html#guidelines" class="btn btn-outline">Ver Directrices Completas</a>
+                                </div>
+                            </div>
+                        </div>
+                    </section>
+                </div>
+            </div>
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MetaMapa</h3>
+                        <p>Plataforma colaborativa para la verificación de hechos históricos y actuales.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navegación</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="viewer.html">Explorar</a></li>
+                            <li><a href="contributor.html">Contribuir</a></li>
+                            <li><a href="admin.html">Administración</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Cuenta</h3>
+                        <ul class="footer-links">
+                            <li><a href="login.html">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="legal.html">Términos de Uso</a></li>
+                            <li><a href="legal.html#privacy">Privacidad</a></li>
+                            <li><a href="legal.html#guidelines">Directrices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MetaMapa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

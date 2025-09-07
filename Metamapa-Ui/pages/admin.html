@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de Administración - MetaMapa</title>
+    <meta name="description" content="Panel de administración de MetaMapa para gestionar usuarios, contenido y configuraciones de la plataforma.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/layout.css">
+    <link rel="stylesheet" href="../css/components.css">
+    <link rel="stylesheet" href="../css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+                    <span class="breadcrumb-item"><a href="index.html">Inicio</a></span>
+                    <span class="breadcrumb-item active">Panel de Administración</span>
+                </nav>
+
+                <h1>Panel de Administración</h1>
+                <p class="mb-xl">Gestiona usuarios, contenido y configuraciones de MetaMapa.</p>
+
+                <!-- Admin Navigation -->
+                <nav class="admin-nav" aria-label="Navegación de administración">
+                    <ul class="admin-nav-list">
+                        <li><a href="#dashboard" class="admin-nav-link active">Dashboard</a></li>
+                        <li><a href="#facts" class="admin-nav-link">Hechos</a></li>
+                        <li><a href="#collections" class="admin-nav-link">Colecciones</a></li>
+                        <li><a href="#users" class="admin-nav-link">Usuarios</a></li>
+                        <li><a href="#reports" class="admin-nav-link">Reportes</a></li>
+                        <li><a href="#settings" class="admin-nav-link">Configuración</a></li>
+                    </ul>
+                </nav>
+
+                <!-- Dashboard Stats -->
+                <section class="admin-section">
+                    <h2>Resumen General</h2>
+                    <div class="stats">
+                        <div class="stat-card">
+                            <div class="stat-number">1,247</div>
+                            <div class="stat-label">Hechos Totales</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">24</div>
+                            <div class="stat-label">Colecciones Activas</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">23</div>
+                            <div class="stat-label">Pendientes de Revisión</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">89</div>
+                            <div class="stat-label">Usuarios Activos</div>
+                        </div>
+                        <div class="stat-card">
+                            <div class="stat-number">5</div>
+                            <div class="stat-label">Reportes Abiertos</div>
+                        </div>
+                    </div>
+                </section>
+
+                <!-- Collections Management -->
+                <section class="admin-section">
+                    <div class="flex justify-between items-center mb-lg">
+                        <h2>Gestión de Colecciones</h2>
+                        <div class="admin-actions">
+                            <button class="btn btn-secondary">Filtrar</button>
+                            <button class="btn btn-primary">Nueva Colección</button>
+                        </div>
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Nombre</th>
+                                <th>Categoría</th>
+                                <th>Hechos</th>
+                                <th>Contribuidores</th>
+                                <th>Estado</th>
+                                <th>Última Actualización</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>Revolución Industrial</strong>
+                                    <div class="text-sm text-gray-600">Eventos e inventos de la era industrial</div>
+                                </td>
+                                <td><span class="badge badge-primary">Historia</span></td>
+                                <td>12</td>
+                                <td>3</td>
+                                <td><span class="badge badge-success">Activa</span></td>
+                                <td><time datetime="2024-01-13">13 Ene 2024</time></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-sm btn-primary">Editar</button>
+                                        <button class="btn btn-sm btn-secondary">Ver</button>
+                                        <button class="btn btn-sm btn-danger">Archivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Descubrimientos del ADN</strong>
+                                    <div class="text-sm text-gray-600">Hitos en la investigación genética</div>
+                                </td>
+                                <td><span class="badge badge-success">Ciencia</span></td>
+                                <td>8</td>
+                                <td>5</td>
+                                <td><span class="badge badge-success">Activa</span></td>
+                                <td><time datetime="2024-01-08">8 Ene 2024</time></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-sm btn-primary">Editar</button>
+                                        <button class="btn btn-sm btn-secondary">Ver</button>
+                                        <button class="btn btn-sm btn-danger">Archivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Historia de Internet</strong>
+                                    <div class="text-sm text-gray-600">Evolución de la red mundial</div>
+                                </td>
+                                <td><span class="badge badge-warning">Tecnología</span></td>
+                                <td>15</td>
+                                <td>7</td>
+                                <td><span class="badge badge-warning">En Revisión</span></td>
+                                <td><time datetime="2024-01-12">12 Ene 2024</time></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-sm btn-primary">Editar</button>
+                                        <button class="btn btn-sm btn-secondary">Ver</button>
+                                        <button class="btn btn-sm btn-danger">Archivar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+
+                <!-- Pending Facts -->
+                <section class="admin-section">
+                    <div class="flex justify-between items-center mb-lg">
+                        <h2>Hechos Pendientes de Revisión</h2>
+                        <div class="admin-actions">
+                            <button class="btn btn-secondary">Filtrar</button>
+                            <button class="btn btn-primary">Revisar Todos</button>
+                        </div>
+                    </div>
+
+                    <div class="alert alert-warning mb-lg">
+                        <strong>Atención:</strong> Hay 23 hechos esperando revisión. El tiempo promedio de espera es de 3 días.
+                    </div>
+
+                    <table class="data-table">
+                        <thead>
+                            <tr>
+                                <th>Título</th>
+                                <th>Contribuidor</th>
+                                <th>Categoría</th>
+                                <th>Fecha Envío</th>
+                                <th>Estado</th>
+                                <th>Acciones</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <strong>La invención del teléfono</strong>
+                                    <div class="text-sm text-gray-600">Alexander Graham Bell patentó el teléfono en 1876...</div>
+                                </td>
+                                <td>
+                                    <div>Juan Pérez</div>
+                                    <div class="text-sm text-gray-600">@juanperez</div>
+                                </td>
+                                <td><span class="badge badge-warning">Tecnología</span></td>
+                                <td><time datetime="2024-01-10">10 Ene 2024</time></td>
+                                <td><span class="badge badge-warning">Pendiente</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-sm btn-primary">Revisar</button>
+                                        <button class="btn btn-sm btn-secondary">Ver</button>
+                                        <button class="btn btn-sm btn-danger">Rechazar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <strong>Descubrimiento de la pe</strong>
+                                </td>
+                                <td>
+                                    <div>Jane Doe</div>
+                                    <div class="text-sm text-gray-600">@janedoe</div>
+                                </td>
+                                <td><span class="badge badge-success">Ciencia</span></td>
+                                <td><time datetime="2024-01-05">5 Ene 2024</time></td>
+                                <td><span class="badge badge-warning">Pendiente</span></td>
+                                <td>
+                                    <div class="table-actions">
+                                        <button class="btn btn-sm btn-primary">Revisar</button>
+                                        <button class="btn btn-sm btn-secondary">Ver</button>
+                                        <button class="btn btn-sm btn-danger">Rechazar</button>
+                                    </div>
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </section>
+            </div>
+        </main>
+    </div>
+</body>
+</html>
