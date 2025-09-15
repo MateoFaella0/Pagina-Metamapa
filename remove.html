@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Eliminar - MetaMapa</title>
+    <meta name="description" content="Solicita eliminacion de hechos del MetaMapa compartiendo tus motivos.">
+    
+    <!-- CSS -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/pages.css">
+</head>
+<body>
+    <div class="page-wrapper">
+        <!-- Header -->
+        <header class="header" role="banner">
+            <div class="container">
+                <div class="header-content">
+                    <a href="index.html" class="logo" aria-label="MetaMapa - Inicio">
+                        MetaMapa
+                    </a>
+                    
+                    <nav class="nav" role="navigation" aria-label="Navegación principal">
+                        <button class="mobile-menu-toggle" aria-label="Abrir menú de navegación">
+                            ☰
+                        </button>
+                        <ul class="nav-list">
+                            <li><a href="index.html" class="nav-link">Inicio</a></li>
+                            <li><a href="viewer.html" class="nav-link">Explorar</a></li>
+                            <li><a href="collections.html" class="nav-link">Colecciones</a></li>
+                            <li><a href="contributor.html" class="nav-link">Contribuir</a></li>
+                            <li><a href="login.html" class="nav-link">Iniciar Sesión</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>
+
+        <!-- Main Content -->
+        <main class="main-content" role="main">
+            <div class="container">
+                <!-- Breadcrumb -->
+                <nav class="breadcrumb" aria-label="Navegación de migas de pan">
+                    <span class="breadcrumb-item"><a href="index.html">Inicio</a></span>
+                    <span class="breadcrumb-item active">Eliminacion</span>
+                </nav>
+
+                <div class="container-sm">
+                    <h1>Solicitar eliminacion de Hecho</h1>
+                    <form class="contributor-form" novalidate>
+                        <!-- Basic Information -->
+                        <div class="form-section">
+                            <h3>Motivo de eliminacion</h3>
+                            
+                            <div class="form-group">
+                                <input 
+                                    type="text" 
+                                    id="fact-title" 
+                                    class="form-input" 
+                                    required
+                                    maxlength="200"
+                                    aria-describedby="title-help"
+                                    placeholder="Escribir aqui..."
+                                >
+                            </div>
+
+                        </div>
+
+                         <button type="submit" class="btn btn-primary">Enviar para Revisión</button>
+      
+                </div>
+
+                       
+
+                        
+
+                        
+
+                            
+                        </div>
+                    </form>
+
+                   
+        </main>
+
+        <!-- Footer -->
+        <footer class="footer" role="contentinfo">
+            <div class="container">
+                <div class="footer-content">
+                    <div class="footer-section">
+                        <h3>MetaMapa</h3>
+                        <p>Plataforma colaborativa para la verificación de hechos históricos y actuales.</p>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Navegación</h3>
+                        <ul class="footer-links">
+                            <li><a href="index.html">Inicio</a></li>
+                            <li><a href="viewer.html">Explorar</a></li>
+                            <li><a href="contributor.html">Contribuir</a></li>
+                            <li><a href="admin.html">Administración</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Cuenta</h3>
+                        <ul class="footer-links">
+                            <li><a href="login.html">Iniciar Sesión</a></li>
+                            <li><a href="register.html">Registrarse</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-section">
+                        <h3>Legal</h3>
+                        <ul class="footer-links">
+                            <li><a href="legal.html">Términos de Uso</a></li>
+                            <li><a href="legal.html#privacy">Privacidad</a></li>
+                            <li><a href="legal.html#guidelines">Directrices</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <p>&copy; 2025 MetaMapa. Todos los derechos reservados.</p>
+                </div>
+            </div>
+        </footer>
+    </div>
+</body>
+</html>
