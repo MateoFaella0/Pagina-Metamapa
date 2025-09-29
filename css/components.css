@@ -627,3 +627,50 @@
   text-transform: uppercase;
   letter-spacing: 0.025em;
 }
+
+/* Map Container */
+.map-container {
+  background: var(--white);
+  padding: var(--space-xl);
+  border-radius: var(--radius-lg);
+  box-shadow: var(--shadow-md);
+}
+
+.map-container h3 {
+  margin: 0 0 var(--space-md) 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--gray-900);
+}
+
+.map-wrapper {
+  position: relative;
+  width: 80%;
+  max-width: 700px;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  box-shadow: var(--shadow-sm);
+  border: 2px solid var(--gray-200);
+}
+
+.map-image {
+  width: 100%;
+  height: 350px;
+  display: block;
+  object-fit: cover;
+}
+
+.map-container p {
+  margin: 0;
+  line-height: 1.6;
+}
+
+@media (max-width: 768px) {
+  .map-container {
+    padding: var(--space-lg);
+  }
+
+  .map-container h3 {
+    font-size: 1.125rem;
+  }
+}
